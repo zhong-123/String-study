@@ -15,4 +15,10 @@
     factory-bean引用上面配置的工厂bean的id，
     factory-method指定为工厂类中的build方法-->
     <bean id="user1" factory-bean="usersFactoryBean" factory-method="build"/>
+
+
+    <!--使用工厂的静态方法来创建bean实例，
+    注意：此时的class属性指定的不是Users的完整类名，而是工厂类的完整类名，
+    然后factory-method指定工厂类中的静态方法create-->
+    <bean id="user2" class="edu.nf.ch01.factory.UsersFactory" factory-method="create"/>
 </beans>
